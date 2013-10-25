@@ -10,4 +10,4 @@ if ( !defined( 'WP_UNINSTALL_PLUGIN' ) )
     exit();
 
 // Remove any options associated with the plugin
-delete_option( 'sds_sb_options' );
+delete_option( 'sds_ssl_options' );
