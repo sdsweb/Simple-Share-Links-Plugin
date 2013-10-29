@@ -249,7 +249,7 @@ if( ! class_exists( 'Simple_Share_Links' ) ) {
 			// Begin Share Button Output
 			$simple_share_links = '<section class="simple-share-links share-buttons">';
 				// Allow developers to "hook" their own label
-				$simple_share_links .= apply_filters( 'simple_share_links_before', '<h4 class="simple-share-links-label">Share This</h4>', $post, $post_permalink );
+				$simple_share_links .= apply_filters( 'simple_share_links_label', '<h4 class="simple-share-links-label">Share This</h4>', $post, $post_permalink );
 
 				// Allow developers to "hook" their own social networks for sharing
 				$simple_share_links = apply_filters( 'simple_share_links_before', $simple_share_links, $post, $post_permalink );
