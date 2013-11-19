@@ -3,7 +3,7 @@
  * Plugin Name: Simple Share Links
  * Plugin URI: http://www.slocumstudio.com
  * Description: A plugin from Slocum Design Studio which adds basic share buttons after all content within a site. Also contains a shortcode for share button output.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Slocum Design Studio
  * Author URI: http://www.slocumstudio.com
  * License: GPL2+
@@ -241,8 +241,12 @@ if( ! class_exists( 'Simple_Share_Links' ) ) {
 
 		/**
 		 * This function generates the output for the share buttons. It is used on the_content filter and in the shortcode function.
+		 *
+		 * Declaring this function as public and static will allow developers to call it
+		 * inside of their templates (i.e. this is a Template Tag) by using the following:
+		 * Simple_Share_Links::get_simple_share_links();
 		 */
-		function get_simple_share_links() {
+		public static function get_simple_share_links() {
 			global $post; // We need this to fetch data such as post_excerpt, post ID, etc...
 			$post_permalink = get_permalink( $post->ID ); // Post permalink
 
